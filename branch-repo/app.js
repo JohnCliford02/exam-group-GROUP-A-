@@ -1,11 +1,15 @@
 const express = require('express');
+const examsRoutes = require('./routes/exams');
+
 const app = express();
-const routes = require('./routes/exam');
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use('/', routes);
+app.use('/exam-group', (req, res) => {
+  res.json({ message: 'Group YOUR_GROUP API' });
+});
+app.use('/exams', examsRoutes);
 
-const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Server running on http://localhost:${port}`);
 });
