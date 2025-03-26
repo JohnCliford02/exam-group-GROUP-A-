@@ -6,7 +6,7 @@
 # API DOCUMENTATION
 # URL: http://localhost:3000/
 
-### 1. Get All Exams
+### 1. [Get All Exams](http://localhost:3000/exams)
 - **Endpoint:** `GET /exams`
 - **Response:**
   ```json
@@ -35,3 +35,26 @@
         "name": "Final Exam",
         "subject": "InfoSec"
     }
+
+# [POST/exams](http://localhost:3000/exams)
+{
+    "name":"Final Exam",
+   "subject": "Database"
+}
+
+# RESPONSE 
+{
+    "id": 6,
+    "name": "Final Exam",
+    "subject": "Science"
+}
+
+# [PUT/exams] (http://localhost:3000/exams/1)
+
+
+{
+  "name": "Updated Midterm Exam",
+  "subject": "Physics"
+}
+
+#
