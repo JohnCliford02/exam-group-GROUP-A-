@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Sample exam data
+// input data
 let exams = [
   { id: 1, name: 'Midterm Exam', subject: 'Mathematics' },
   { id: 2, name: 'Final Exam', subject: 'History' },
