@@ -6,12 +6,10 @@ let exams = [
   { id: 2, name: 'Final Exam', subject: 'History' }
 ];
 
-// ✅ 1. GET /exams (List all exams)
 router.get('/', (req, res) => {
   res.json(exams);
 });
 
-// ✅ 2. POST /exams (Add new exam)
 router.post('/', (req, res) => {
   const { name, subject } = req.body;
   if (!name || !subject) {
@@ -22,7 +20,6 @@ router.post('/', (req, res) => {
   res.status(201).json(newExam);
 });
 
-// ✅ 3. PUT /exams/:id (Update an exam)
 router.put('/:id', (req, res) => {
   const examId = parseInt(req.params.id);
   const { name, subject } = req.body;

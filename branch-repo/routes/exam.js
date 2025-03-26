@@ -9,7 +9,7 @@ let exams = [
   { id: 4, name: 'Project Presentation', subject: 'English' },
 ];
 
-// ✅ Get a single exam by ID
+//  Get a single exam by ID
 router.get('/exam/:id', (req, res) => {
   const examId = parseInt(req.params.id);
   const exam = exams.find(e => e.id === examId);
@@ -21,7 +21,7 @@ router.get('/exam/:id', (req, res) => {
   res.json(exam);
 });
 
-// ✅ Delete an exam by ID
+//  Delete an exam by ID
 router.delete('/exam/:id', (req, res) => {
   const examId = parseInt(req.params.id);
   const index = exams.findIndex(e => e.id === examId);
